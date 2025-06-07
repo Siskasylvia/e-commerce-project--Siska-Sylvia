@@ -1,0 +1,177 @@
+/* Reset dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Kontainer utama header */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigasi */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Ikon keranjang */
+.cart-icon {
+  font-size: 1.5rem;
+}
+
+/* Hero section */
+.hero {
+  background: #e2e2e2;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Judul section umum */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #4CAF50;
+}
+
+/* Paragraf umum */
+p {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Section konten */
+.products,
+.categories,
+.about {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Grid produk */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Kartu produk */
+.product {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 calc(33% - 1rem);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Harga produk */
+.price {
+  font-weight: bold;
+  color: #4CAF50;
+  margin-top: 0.5rem;
+}
+
+/* Kategori */
+.categories ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsif */
+@media (max-width: 1200px) {
+  .product {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .product {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .cart-icon {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
